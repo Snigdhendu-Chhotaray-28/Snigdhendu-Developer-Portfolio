@@ -1,0 +1,263 @@
+/* =============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================= */
+
+/* ─── CSS Custom Properties / Themes ─── */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --nav-text: #000000;
+  --nav-bg: #ffffff;
+  --nav-gradient: linear-gradient(180deg,rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 41%, rgba(255, 255, 255, 0.4) 60%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
+  --border-color: #4f4f4f;
+  --card-bg: #f9fafb;
+  --contact-input-bg: #f3f4f6;
+  --accent-color: #5227ff;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --nav-text: #ffffff;
+  --nav-bg: #000000;
+  --nav-gradient: linear-gradient(180deg,rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 41%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  --border-color: #4f4f4f;
+  --card-bg: #111111;
+  --contact-input-bg: #262626;
+  --accent-color: #5227ff;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Global Reset ─── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Lenis Smooth Scroll Compatibility Overrides */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Global Focus-Visible Ring for WCAG AA Accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ─── Skip to Content (Accessibility) ─── */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 10000;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ─── Screen Reader Only (Accessibility Utility) ─── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ═════════════════════════════════════════════
+   DESKTOP NAVIGATION
+   ═════════════════════════════════════════════ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem 2.5rem;
+  color: var(--nav-text);
+  transition: color 0.3s ease;
+  pointer-events: auto;
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--nav-gradient);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a {
+  position: relative;
+  transition: opacity 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--nav-text);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a.active::after,
+.nav-links a[aria-current='page']::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Mobile Menu Container */
+.mobile-menu-wrapper {
+  display: none;
+}
+
+/* ═════════════════════════════════════════════
+   MEDIA QUERIES & ACCESSIBILITY OVERRIDES
+   ═════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem 1rem;
+    padding-right: 5rem;
+    z-index: 90;
+  }
+
+  .nav-links {
+    display: none; /* Hide desktop nav on mobile */
+  }
+
+  .mobile-menu-wrapper {
+    display: block; /* Show mobile menu wrapper */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none; /* Pass clicks through except on drawer elements */
+  }
+}
+
+/* Reduced Motion Preference Override */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  body,
+  .nav,
+  .nav::before,
+  .nav-links a::after {
+    transition: none !important;
+  }
+}
+
+/* Print / Static Search Scraper Fallback */
+@media print {
+  .nav,
+  .mobile-menu-wrapper,
+  .skip-to-content {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
