@@ -1,0 +1,197 @@
+/* ─── About Section ─── */
+.about-section {
+  min-height: 100vh;
+  padding: 40px 5% 4rem;
+  background: transparent;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 901px) {
+  .about-lanyard-column {
+    flex: 0 0 40% !important;
+    width: 40% !important;
+    min-width: auto !important;
+  }
+
+  .about-text-column {
+    flex: 1 !important;
+  }
+}
+
+.about-header h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about-header .highlight {
+  color: var(--text-color);
+  border-bottom: 4px solid var(--text-color);
+}
+
+.about-header,
+.about-content {
+  position: relative;
+  z-index: 20;
+}
+
+
+
+/* ── Two-column layout: text left, lanyard right ── */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Left text column */
+.about-text-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  padding-right: 4rem;
+  border-radius: 20px;
+}
+
+.about-text-heading {
+  margin-bottom: 1.5rem;
+}
+
+.about-text-heading h3 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  line-height: 1.1;
+}
+
+.about-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.about-desc-paragraph {
+  margin-bottom: 1.4rem;
+}
+
+.about-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.hire-btn,
+.resume-btn {
+  padding: 0.75rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hire-btn {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+}
+
+.hire-btn:hover {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.resume-btn {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+.resume-btn:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Right lanyard column */
+.about-lanyard-column {
+  flex: 1;
+  min-width: 320px;
+  height: 80vh;
+  min-height: 500px;
+  max-height: 700px;
+  position: relative;
+}
+
+.about-lanyard-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15vw;
+  height: 2px;
+  background-color: var(--text-color);
+  z-index: 10;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text-column {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .about-actions {
+    justify-content: center;
+  }
+
+  .about-lanyard-column {
+    display: none;
+  }
+
+  .about-header h2 {
+    font-size: 3rem;
+  }
+
+  .about-text-heading h3 {
+    font-size: 2rem;
+  }
+
+  .about-desc-paragraph {
+    justify-content: center;
+  }
+}
