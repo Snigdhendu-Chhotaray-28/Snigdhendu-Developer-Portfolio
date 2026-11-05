@@ -1,0 +1,24 @@
+{
+  "name": "Snigdhendu Chhotaray — Frontend Developer & DevOps Engineer",
+  "short_name": "SC Portfolio",
+  "description": "Portfolio of Snigdhendu Chhotaray, a frontend developer and DevOps engineer from Bhubaneswar, India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#5227FF",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-sc-photoaidcom-cropped.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}

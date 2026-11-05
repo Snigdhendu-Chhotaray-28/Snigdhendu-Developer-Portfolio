@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://snigdhendu-developer-portfolio.netlify.app/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://snigdhendu-developer-portfolio.netlify.app/hero-img.png</image:loc>
+      <image:title>Snigdhendu Chhotaray — Frontend Developer and DevOps Engineer</image:title>
+      <image:caption>Portrait of Snigdhendu Chhotaray, a frontend developer and DevOps engineer from Bhubaneswar, India</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://snigdhendu-developer-portfolio.netlify.app/proj-1.png</image:loc>
+      <image:title>Brainwave AI Landing Page — React and Tailwind CSS Project</image:title>
+      <image:caption>Screenshot of the Brainwave AI Chat landing page built with React and Tailwind CSS by Snigdhendu Chhotaray</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://snigdhendu-developer-portfolio.netlify.app/proj-2.png</image:loc>
+      <image:title>Interactive Birthday Celebration Website — JavaScript Project</image:title>
+      <image:caption>Screenshot of the interactive birthday website with microphone-based candle blowing feature</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://snigdhendu-developer-portfolio.netlify.app/proj-3.png</image:loc>
+      <image:title>Coca-Cola E-commerce Store — HTML CSS JavaScript Project</image:title>
+      <image:caption>Screenshot of the Coca-Cola e-commerce website with interactive product showcase</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://snigdhendu-developer-portfolio.netlify.app/proj-4.png</image:loc>
+      <image:title>E-Commerce Watch Store — Swiper.js Project</image:title>
+      <image:caption>Screenshot of the responsive Watch Store e-commerce website with Swiper.js sliders</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://snigdhendu-developer-portfolio.netlify.app/proj-5.png</image:loc>
+      <image:title>Interactive Indian Clock and Calendar Visualizer — JavaScript Project</image:title>
+      <image:caption>Screenshot of the real-time IST clock and animated calendar visualizer</image:caption>
+    </image:image>
+  </url>
+</urlset>
