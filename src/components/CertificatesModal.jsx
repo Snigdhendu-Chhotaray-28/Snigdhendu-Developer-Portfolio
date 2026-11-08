@@ -299,7 +299,7 @@ export default function CertificatesModal({ isOpen, onClose }) {
                       </p>
 
                       <p className="cert-desc" itemprop="description">
-                        Formal offer for a 6-week remote internship as Junior ReactJS Developer — building UI interfaces, implementing front-end logic, and translating UI/UX wireframes into code.
+                        Offered a 6-week remote role as Junior ReactJS Developer at YuvaIntern by Henry Harvin.
                       </p>
 
                       <div className="cert-actions">
@@ -361,11 +361,11 @@ export default function CertificatesModal({ isOpen, onClose }) {
                       </p>
 
                       <p className="cert-desc" itemprop="description">
-                        Certifies successful completion of the Junior ReactJS Developer Internship at YuvaIntern, Vadodara. Demonstrated dedication, professionalism, and consistent performance throughout the 6-week program.
+                        Successfully completed a 6-week Junior ReactJS Developer internship at YuvaIntern, demonstrating dedication and professionalism.
                       </p>
 
                       <div className="cert-actions">
-                        <span className="cert-tag">Cert No: YI/2026/208649/452195</span>
+                        <span className="cert-tag">Completion Cert</span>
                         <button
                           type="button"
                           onClick={(e) => { e.stopPropagation(); setLightboxImage('/yuvaintern-completion-cert.jpg'); }}
