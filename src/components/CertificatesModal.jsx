@@ -112,7 +112,7 @@ export default function CertificatesModal({ isOpen, onClose }) {
                   <span className="icon" aria-hidden="true"><FileText size={18} /></span> INTERNSHIPS & LETTER OF RECOMMENDATION
                 </div>
                 <div className="accordion-right">
-                  <span className="item-count">2 Items</span>
+                  <span className="item-count">4 Items</span>
                   {expandedSection === 'internships' ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                 </div>
               </button>
@@ -245,6 +245,130 @@ export default function CertificatesModal({ isOpen, onClose }) {
                         <button
                           type="button"
                           onClick={(e) => { e.stopPropagation(); setLightboxImage('/Letter of Recommendation_page-0001.jpg'); }}
+                          className="cert-link"
+                          style={{ background: 'none', border: 'none', font: 'inherit', cursor: 'pointer', padding: 0 }}
+                        >
+                          View Full Doc →
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  {/* Certificate 3: YuvaIntern Offer Letter */}
+                  <article
+                    className="cert-card"
+                    itemScope
+                    itemType="https://schema.org/EducationalOccupationalCredential"
+                  >
+                    <meta itemprop="credentialCategory" content="Internship Offer Letter" />
+                    <meta itemprop="validFrom" content="2026-09-13" />
+
+                    <button
+                      type="button"
+                      className="cert-img-container"
+                      onClick={() => setLightboxImage('/yuvaintern-offer-letter.jpg')}
+                      aria-label="View enlarged YuvaIntern Internship Offer Letter for Snigdhendu Chhotaray"
+                    >
+                      <img
+                        src="/yuvaintern-offer-letter.jpg"
+                        alt="Snigdhendu Chhotaray — Junior ReactJS Developer Internship Offer Letter from YuvaIntern"
+                        className="cert-preview-img"
+                        loading="lazy"
+                        width="400"
+                        height="280"
+                        itemProp="image"
+                      />
+                      <div className="cert-img-overlay" aria-hidden="true">
+                        <span className="view-btn">Click to View</span>
+                      </div>
+                    </button>
+
+                    <div className="cert-info">
+                      <div className="cert-info-header">
+                        <h4 itemprop="name">Junior ReactJS Developer — Offer Letter</h4>
+                        <span className="cert-date">Sep 13 – Oct 25, 2026</span>
+                      </div>
+
+                      <p
+                        className="cert-company"
+                        itemProp="recognizedBy"
+                        itemScope
+                        itemType="https://schema.org/Organization"
+                      >
+                        <span itemProp="name">YuvaIntern · Henry Harvin Education</span>
+                      </p>
+
+                      <p className="cert-desc" itemprop="description">
+                        Formal offer for a 6-week remote internship as Junior ReactJS Developer — building UI interfaces, implementing front-end logic, and translating UI/UX wireframes into code.
+                      </p>
+
+                      <div className="cert-actions">
+                        <span className="cert-tag">Frontend · ReactJS</span>
+                        <button
+                          type="button"
+                          onClick={(e) => { e.stopPropagation(); setLightboxImage('/yuvaintern-offer-letter.jpg'); }}
+                          className="cert-link"
+                          style={{ background: 'none', border: 'none', font: 'inherit', cursor: 'pointer', padding: 0 }}
+                        >
+                          View Full Doc →
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  {/* Certificate 4: YuvaIntern Certificate of Experience */}
+                  <article
+                    className="cert-card"
+                    itemScope
+                    itemType="https://schema.org/EducationalOccupationalCredential"
+                  >
+                    <meta itemprop="credentialCategory" content="Certificate of Experience" />
+                    <meta itemprop="validFrom" content="2026-10-25" />
+
+                    <button
+                      type="button"
+                      className="cert-img-container"
+                      onClick={() => setLightboxImage('/yuvaintern-completion-cert.jpg')}
+                      aria-label="View enlarged YuvaIntern Certificate of Experience for Snigdhendu Chhotaray"
+                    >
+                      <img
+                        src="/yuvaintern-completion-cert.jpg"
+                        alt="Snigdhendu Chhotaray — Junior ReactJS Developer Certificate of Experience from YuvaIntern"
+                        className="cert-preview-img"
+                        loading="lazy"
+                        width="400"
+                        height="280"
+                        itemProp="image"
+                      />
+                      <div className="cert-img-overlay" aria-hidden="true">
+                        <span className="view-btn">Click to View</span>
+                      </div>
+                    </button>
+
+                    <div className="cert-info">
+                      <div className="cert-info-header">
+                        <h4 itemprop="name">Junior ReactJS Developer — Certificate of Experience</h4>
+                        <span className="cert-date">Oct 25, 2026</span>
+                      </div>
+
+                      <p
+                        className="cert-company"
+                        itemProp="recognizedBy"
+                        itemScope
+                        itemType="https://schema.org/Organization"
+                      >
+                        <span itemProp="name">YuvaIntern · Henry Harvin Education</span>
+                      </p>
+
+                      <p className="cert-desc" itemprop="description">
+                        Certifies successful completion of the Junior ReactJS Developer Internship at YuvaIntern, Vadodara. Demonstrated dedication, professionalism, and consistent performance throughout the 6-week program.
+                      </p>
+
+                      <div className="cert-actions">
+                        <span className="cert-tag">Cert No: YI/2026/208649/452195</span>
+                        <button
+                          type="button"
+                          onClick={(e) => { e.stopPropagation(); setLightboxImage('/yuvaintern-completion-cert.jpg'); }}
                           className="cert-link"
                           style={{ background: 'none', border: 'none', font: 'inherit', cursor: 'pointer', padding: 0 }}
                         >

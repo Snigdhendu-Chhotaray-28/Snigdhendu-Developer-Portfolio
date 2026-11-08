@@ -95,7 +95,7 @@ export default function CertAndStripsSection() {
             <h3>Experienced from</h3>
             <div className="companies-container" aria-label="Organizations and companies worked with">
               <div className="companies-track">
-                {[1, 2, 3, 4, 5, 6].map(setIndex => {
+                {[1, 2, 3, 4].map(setIndex => {
                   const isDuplicate = setIndex > 1;
                   return (
                     <React.Fragment key={`comp-set-${setIndex}`}>
@@ -123,6 +123,19 @@ export default function CertAndStripsSection() {
                       >
                         <span className="company-icon" aria-hidden="true">💻</span>
                         <span {...(!isDuplicate && { itemProp: 'name' })}>CodeTech IT Solutions</span>
+                      </div>
+
+                      <div
+                        className="company-badge"
+                        {...(!isDuplicate && {
+                          itemProp: 'worksFor',
+                          itemScope: true,
+                          itemType: 'https://schema.org/Organization',
+                        })}
+                        {...(isDuplicate && { 'aria-hidden': 'true' })}
+                      >
+                        <span className="company-icon" aria-hidden="true">⚛️</span>
+                        <span {...(!isDuplicate && { itemProp: 'name' })}>YuvaIntern</span>
                       </div>
                     </React.Fragment>
                   );
